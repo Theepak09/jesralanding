@@ -1,0 +1,225 @@
+.testimonials {
+    margin: 80px auto;
+    padding: 0 80px;
+    position: relative;
+}
+
+.next-icon, .back-icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #212EA0;
+    z-index:2;
+}
+
+.back-icon{
+    right: auto;
+    left: 0;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.slider ul li{
+    list-style: none;
+    width: 50%;
+    padding: 20px;
+}
+
+.slide {
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    padding: 40px;
+    border-radius: 10px;
+    color: #676767;
+    line-height: 1.4;
+    min-height: 300px; /* Keeps consistent height */
+    box-sizing: border-box; /* Includes padding in the height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centers content vertically */
+    align-items: center;  
+    position: relative;    /* Centers content horizontally */
+}
+.slide p{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.slide img{
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid #212EA0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    position: absolute; /* Absolute position for top-left corner */
+    top: 40px;          /* Space from top */
+    left: 40px;         /* Space from left */
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 970px) {
+    .slide {
+        padding: 30px;  /* Less padding on smaller screens */
+        min-height: 250px; /* Adjusted min-height */
+    }
+
+    .user-info {
+        position: relative; /* Remove absolute positioning */
+        margin-bottom: 10px;
+        top: 0;              /* Remove fixed top positioning */
+        left: 0;             /* Make sure it's left-aligned */
+        align-items: flex-start;  /* Align text to the start (left) */
+        font-size: 14px;  /* Slightly smaller font for smaller screens */
+    }
+
+    .slide img {
+        width: 50px;  /* Smaller image size for smaller screens */
+    }
+
+    .slide p {
+        margin-top: 20px; /* Adjust margin for text */
+        font-size: 14px;  /* Make text a bit smaller on smaller screens */
+    }
+}
+
+/* Adjustments for screens below 860px */
+@media (max-width: 860px) {
+    .slide {
+        padding: 20px;  /* Less padding on smaller screens */
+        min-height: 220px; /* Adjusted height */
+        justify-content: flex-start; /* Ensure the content starts from the top */
+        align-items: flex-start;  /* Align the content to the left */
+    }
+
+    .user-info {
+        position: relative; /* Make sure it's not absolute */
+        margin-bottom: 10px;
+        top: 0;
+        left: 0;
+        align-items: flex-start;  /* Align the user info text to the left */
+        font-size: 13px;  /* Smaller font size */
+        margin-top: 0;  /* Adjust margin for better spacing */
+    }
+
+    .slide img {
+        width: 45px;  /* Smaller image for smaller screens */
+    }
+
+    .slide p {
+        margin-top: 10px; /* Adjust margin for text */
+        font-size: 13px;  /* Smaller font size for text */
+    }
+}
+
+/* Adjustments for screens below 783px */
+@media (max-width: 783px) {
+    .slider ul {
+        width: 400%; /* Total width for 4 slides */
+    }
+
+    .slider ul li {
+        width: 33.33%; /* Make each slide take up 1/3 of the width */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .slide {
+        padding: 25px; /* Adjust padding for smaller screens */
+        min-height: 250px; /* Adjusted min-height */
+    }
+
+    .user-info {
+        font-size: 14px;  /* Slightly smaller font for smaller screens */
+    }
+
+    .slide img {
+        width: 50px;  /* Smaller image size for smaller screens */
+    }
+
+    .slide p {
+        margin-top: 20px; /* Adjust margin for text */
+        font-size: 14px;  /* Make text a bit smaller on smaller screens */
+    }
+}
+
+/* Further adjustments for screens below 645px */
+@media (max-width: 645px) {
+    .slider ul {
+        width: 400%; /* Ensures the total width of 4 slides */
+    }
+
+    .slider ul li {
+        width: 50%; /* Each slide takes 50% of the container width (2 slides per row) */
+        padding: 10px;
+    }
+
+    .slide {
+        padding: 20px; /* Reduce padding */
+        min-height: 230px; /* Adjusted height for smaller screens */
+        justify-content: flex-start; /* Align content to the top */
+        align-items: flex-start; /* Align content to the left */
+    }
+
+    .user-info {
+        font-size: 13px;  /* Smaller font size for user info */
+    }
+
+    .slide img {
+        width: 45px;  /* Smaller image for smaller screens */
+    }
+
+    .slide p {
+        margin-top: 10px; /* Adjust margin for text */
+        font-size: 13px;  /* Smaller font size for text */
+    }
+}
+
+/* Further adjustments for very small screens (below 600px) */
+@media (max-width: 600px) {
+    .slider ul {
+        width: 400%; /* Adjust width for smaller devices */
+    }
+
+    .slider ul li {
+        width: 100%; /* Each slide takes the full width (one per row) */
+        padding: 5px; /* Less padding */
+    }
+
+    .slide {
+        padding: 15px; /* Less padding for very small screens */
+        min-height: 200px; /* Adjusted height */
+        justify-content: flex-start; /* Align content to the top */
+        align-items: flex-start; /* Align content to the left */
+    }
+
+    .user-info {
+        font-size: 12px;  /* Smaller font size for user info */
+    }
+
+    .slide img {
+        width: 35px;  /* Even smaller image */
+    }
+
+    .slide p {
+        margin-top: 5px; /* Reduce top margin for text */
+        font-size: 12px;  /* Smaller font for text */
+    }
+}

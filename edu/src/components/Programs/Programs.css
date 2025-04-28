@@ -1,0 +1,98 @@
+.programs {
+  margin: 80px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.program {
+  flex-basis: 31%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.programs img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 15, 152, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.caption img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.program:hover .caption {
+  opacity: 1;
+}
+
+/* MEDIA QUERIES */
+
+/* For screens less than 1150px */
+@media (max-width: 1150px) {
+  .programs {
+    flex-direction: column;
+  }
+
+  .program {
+    flex-basis: 100%;
+  }
+}
+
+/* For screens less than 500px */
+@media (max-width: 539px) {
+  .programs {
+    flex-direction: column;
+  }
+
+  .program {
+    flex-basis: 100%;
+    margin: 20px 0;
+  }
+
+  .programs img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .caption {
+    padding: 10px;
+    font-size: 14px; /* Slightly smaller text for small screens */
+  }
+
+  .caption img {
+    width: 30px; /* Smaller icon */
+  }
+}
